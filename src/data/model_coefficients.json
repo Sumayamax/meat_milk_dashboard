@@ -1,0 +1,15 @@
+{
+  "intercept": 100,
+  "coefficients": {
+    "production": 0.6,
+    "income": 0.25,
+    "price": -0.4,
+    "infrastructure": 0.5
+  },
+  "scale_factors": {
+    "production": 1,
+    "income": 1,
+    "price": 1,
+    "infrastructure": 1
+  }
+}

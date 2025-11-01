@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+import Sidebar from "./components/layout/Sidebar";
+import Navbar from "./components/layout/Navbar";
+import { Routes, Route } from "react-router-dom";
+
+import Overview from "./pages/Overview";
+import Inequality from "./pages/Inequality";
+import ScenarioModeling from "./pages/ScenarioModeling";
+import Recommendations from "./pages/Recommendations";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{color:"white", padding:20}}>Debug Loaded
+      <Sidebar />
+
+      <div style={{ flex: 1 }}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Overview />} />
+          <Route path="/inequality" element={<Inequality />} />
+          <Route path="/scenario" element={<ScenarioModeling />} />
+          <Route path="/recommendations" element={<Recommendations />} />
+        </Routes>
+      </div>
     </div>
   );
 }
-
-export default App;
